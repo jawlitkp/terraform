@@ -15,7 +15,6 @@ pipeline {
         stage('NetworkInit'){
             steps {
                 dir('terraform/'){
-                    sh 'terraform --version'
                     sh "terraform init"
                     sh "echo \$PWD"
                     sh "whoami"
